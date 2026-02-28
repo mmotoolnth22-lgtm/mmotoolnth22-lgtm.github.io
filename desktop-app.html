@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d2down for PC - Free YouTube Downloader for Windows & Mac</title>
+    <meta name="description"
+        content="Download d2down for Desktop. The fastest YouTube Video Downloader for Windows and Mac. Download playlists, channels, 4K/8K videos, and convert to MP3 in one click.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=4">
+    <style>
+        /* Specific Styles for Desktop App Page - Light Theme */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            gap: 4rem;
+        }
+
+        .hero-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #475569;
+            /* Dark Gray */
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            /* Softer shadow */
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image img:hover {
+            transform: translateY(-10px);
+        }
+
+        .download-btn-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #6366f1;
+            color: white;
+            padding: 18px 36px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .download-btn-large:hover {
+            background: #4f46e5;
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(99, 102, 241, 0.5);
+            color: white;
+            text-decoration: none;
+        }
+
+        .os-support {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #6366f1;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: #1e293b;
+            /* Dark Slate */
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            /* Slate 500 */
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="index.html">Home</a>
+            <a href="desktop-app.html" style="color: #6366f1; font-weight: bold;">App for PC</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+
+            <div class="lang-dropdown">
+                <button class="lang-btn"><i class="fas fa-globe"></i> Language <i
+                        class="fas fa-chevron-down"></i></button>
+                <div class="lang-content">
+                    <a href="/">English</a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-text">
+                    <h1>The Ultimate Video Downloader for PC</h1>
+                    <p>Experience the most powerful video downloader ever built. Enjoy restricted-free downloading with
+                        <strong>d2down Desktop</strong>. Unlimited speed, unlimited quality.
+                    </p>
+                    <p style="margin-top: 10px; color: #64748b; font-size: 1rem;">Unlock 8K, Playlists, Channels, and
+                        Subtitles in one click.</p>
+
+                    <a href="#" class="download-btn-large"
+                        onclick="alert('Coming soon! We are building the Windows version.'); return false;">
+                        <i class="fab fa-windows"></i> Download for Windows
+                    </a>
+                    <div class="os-support">
+                        <i class="fas fa-check-circle"></i> Compatible with Windows 10, 11 (64-bit)
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/600x400?text=App+Screenshot" alt="d2down Interface"
+                        id="appMockup" style="opacity: 0.8;">
+                    <!-- Replacing missing image with placeholder or keeping if user has it. Keeping placeholder for safety as I don't see images folder in file list clearly. -->
+                </div>
+            </section>
+
+            <!-- YouTube Mastery Section -->
+            <section style="margin: 4rem auto; max-width: 1200px; padding: 0 2rem;">
+                <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">YouTube Mastery</h2>
+                <div class="features-grid" style="margin: 0; padding: 0;">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-list-ol"></i></div>
+                        <h3>Playlists & Channels</h3>
+                        <p>Download hundreds of videos at once. Paste a Playlist or Channel URL and grab every single
+                            video in one click.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-closed-captioning"></i></div>
+                        <h3>Subtitles & Lyrics</h3>
+                        <p>Auto-download subtitles/CC in any language. Perfect for learning languages or archiving
+                            movies.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-eye"></i></div>
+                        <h3>8K HDR & 60FPS</h3>
+                        <p>Enjoy the highest visual fidelity. Download 4K/8K HDR videos and smooth 60fps gaming clips
+                            without quality loss.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-door-open"></i></div>
+                        <h3>Restricted Content</h3>
+                        <p>Login with your account (cookies) to download age-restricted videos, private playlists, and
+                            membership-only content.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advanced Features Grid -->
+            <section
+                style="margin: 4rem auto; max-width: 1200px; padding: 0 2rem; background: #f8fafc; border-radius: 20px; padding-top: 3rem; padding-bottom: 3rem; border: 1px solid #e2e8f0;">
+                <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Powerful Capabilities</h2>
+                <div class="features-grid" style="margin: 0; padding: 0;">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-globe-americas"></i></div>
+                        <h3>1000+ Sites Support</h3>
+                        <p>Beyond YouTube: Download from TikTok (No Watermark), Facebook, Instagram, Twitch, Bilibili,
+                            Vimeo, Twitter/X, and more.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <h3>Speed Boost</h3>
+                        <p>Bypass YouTube throttling. Our multi-threaded engine maximizes your bandwidth for
+                            lightning-fast downloads.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-music"></i></div>
+                        <h3>Smart MP3 Converter</h3>
+                        <p>Extract audio to MP3/M4A/FLAC. Automatically embeds accurate album art, artist name, and
+                            metadata tags.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-cut"></i></div>
+                        <h3>Trim & Cut (Coming Soon)</h3>
+                        <p>Download only a specific portion of a video. Why download a 10-hour stream for a 5-minute
+                            clip?</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Video Downloader. Made with ❤️</p>
+        </footer>
+    </div>
+</body>
+
+</html>
