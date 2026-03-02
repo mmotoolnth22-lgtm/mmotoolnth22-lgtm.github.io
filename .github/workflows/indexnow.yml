@@ -1,0 +1,41 @@
+name: Auto IndexNow from Sitemap
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fetch sitemap
+        run: |
+          curl -s https://d2down.com/sitemap.xml -o sitemap.xml
+
+      - name: Extract URLs
+        run: |
+          grep -oP '(?<=<loc>).*?(?=</loc>)' sitemap.xml > urls.txt
+
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Convert to JSON properly
+        run: |
+          jq -R -s -c 'split("\n")[:-1]' urls.txt > urllist.json
+
+          jq -n \
+            --arg host "d2down.com" \
+            --arg key "59930b4edb204bd4a059b55ab7591018" \
+            --arg keyLocation "https://d2down.com/59930b4edb204bd4a059b55ab7591018.txt" \
+            --argjson urlList "$(cat urllist.json)" \
+            '{host:$host,key:$key,keyLocation:$keyLocation,urlList:$urlList}' \
+            > data.json
+
+      - name: Send to IndexNow
+        run: |
+          curl -X POST https://api.indexnow.org/indexnow \
+          -H "Content-Type: application/json; charset=utf-8" \
+          -d @data.json
